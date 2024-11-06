@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Spinner with Logo</title>
+    <style>
+        /* Center everything on the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #F9F9F9;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Logo styling */
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #1E2032;
+        }
+
+        .logo .red {
+            color: #CC0000; /* Primary red */
+        }
+
+        /* Spinner container for Flex alignment */
+        .spinner-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 60px 0;
+        }
+
+        /* Spinner animation */
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 12px solid #BCD8FB; /* Light blue background segment */
+            border-top: 12px solid #7e83b1; /* Dark blue moving segment */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Spin animation keyframes */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Loading text styles */
+        .loading-text {
+            color: #1E2032; /* Primary black */
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .subtext {
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo at the top -->
+    <div class="logo">
+        <span class="red">store</span>OS
+    </div>
+
+    <!-- Spinner and loading text -->
+    <div class="spinner-container">
+        <div class="spinner"></div>
+        <p class="loading-text">Loading...</p>
+        <p class="subtext">This may take a little time</p>
+    </div>
+</body>
+</html>
